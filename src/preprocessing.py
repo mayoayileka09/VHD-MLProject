@@ -5,8 +5,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 
 def split_features_targets(df: pd.DataFrame, target_col: str):
-    X = df.drop(columns=[target_col]) #Features
-    y = df[target_col].copy() #Target
+    X = df.drop(columns=[target_col]) #Just the Features
+    y = df[target_col].copy() #Only the Targets
     return X, y
 
 def build_preprocessor(X: pd.DataFrame) -> ColumnTransformer:
