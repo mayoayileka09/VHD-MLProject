@@ -14,6 +14,7 @@ def eval_multiclass(y_true, y_pred):
     }
 
 
+# Input: true values // Output: predicted values
 def eval_regression(y_true, y_pred):
     rmse = mean_squared_error(y_true, y_pred, squared = False)
     return {
